@@ -2,17 +2,44 @@
 <html xmlns:th="http //www.thymeleaf.org">
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Web Mail System</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-<h1>Login page</h1>
-<form th:action="@{/login}" th:object="${loginForm}" method="post">
-<label for="username">username</label>
-<input type="text" id="username" name="username" autofocus="autofocus">
-<label for="password">password</label>
-<input type="password" id="password" name="password" >
-<br/>
-<input type="submit" value="login">
-</form>
+
+	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+		<a class="navbar-brand" href="#">Web Mail System</a>
+	</nav>
+
+
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-4"></div>
+			
+			<div class="col-sm-4">
+				<form th:action="@{/login}" th:object="${loginForm}" method="post">
+					<label for="username">username</label> <input type="text"
+						id="username" name="username" autofocus="autofocus"> <label
+						for="password">password</label> <input type="password"
+						id="password" name="password"> <br /> <input
+						type="submit" value="login">
+				</form>
+			</div>
+
+			<div class="col-sm-4"></div>
+
+		</div>
+	</div>
+
+
+
 </body>
 </html>

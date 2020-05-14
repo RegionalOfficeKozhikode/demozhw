@@ -38,5 +38,15 @@ public class LoginController {
 		return "login";
 	}
 
+	
+	@RequestMapping(value="/start",method=RequestMethod.GET)
+	public String getStartPage() {
+		return "start";
+	}
+	
+	@RequestMapping(value="/logout",method=RequestMethod.GET)
+	public String getLogoutPage() {
+		return "logout";
+	}
 
 }
