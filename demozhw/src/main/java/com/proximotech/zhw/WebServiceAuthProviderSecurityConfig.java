@@ -29,7 +29,7 @@ public class WebServiceAuthProviderSecurityConfig extends WebSecurityConfigurerA
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-		http.formLogin().and().authorizeRequests().antMatchers("/home").authenticated();
+//		http.formLogin().and().authorizeRequests().antMatchers("/home").authenticated();
 //		http.httpBasic().and().authorizeRequests().antMatchers("/").authenticated();
 	}
 
