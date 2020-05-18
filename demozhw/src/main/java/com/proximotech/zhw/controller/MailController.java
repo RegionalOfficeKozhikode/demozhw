@@ -44,19 +44,17 @@ public class MailController {
 		
 		MailInput input = (MailInput) requestInput.getInput();
 		
-		if(null == input.getLinkId()) {
+		if(null == input.getLinkId()) 
+			return "redirect:/error";
 			
-		}
 		
 		
 		
-		Mail newMail = mailService.readBinaryFile("9009117");
+		
+		Mail newMail = mailService.readBinaryFile(input.getLinkId());
 		model.addAttribute("mail", newMail);
-		model.addAttribute("cc", "sample cc");
-/*		mv.addObject("mail", newMail);
-		mv.addObject("cc", "sample cc");
-		mv.setViewName("home");
-		return mv;*/
+		
+		
 		return "home";
 	}
 
