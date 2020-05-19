@@ -5,6 +5,8 @@
  */
 package com.proximotech.zhw.controller;
 
+import java.io.IOException;
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -51,7 +53,16 @@ public class MailController {
 		
 		
 		
-		Mail newMail = mailService.readBinaryFile(input.getLinkId());
+		Mail newMail = null;
+		try {
+			newMail = mailService.readBinaryFile(input.getLinkId());
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		model.addAttribute("mail", newMail);
 		
 		

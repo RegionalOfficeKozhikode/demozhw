@@ -3,6 +3,8 @@
  */
 package com.proximotech.zhw.service;
 
+import java.io.IOException;
+
 import com.proximotech.model.Mail;
 
 /**
@@ -11,6 +13,8 @@ import com.proximotech.model.Mail;
  */
 public interface MailService {
 
-	Mail readBinaryFile(String string);
+	Mail readBinaryFile(String emlFile) throws IOException, Exception;
+	
+	Mail writeBinaryFile(String emlFile, String answer) throws IOException, Exception;
 
 }
